@@ -1,0 +1,77 @@
+site_name: Digital Logic & Design 101
+site_url: https://arg0nium.github.io/dld-101
+site_author: z3r0d4y
+site_description: "Learn Digital Logic & Design – from gates to HDL"
+
+# Theme settings
+theme:
+  name: material
+  logo: assets/logo.png     # put your logo in docs/assets/logo.png
+  favicon: assets/logo.png  # optional, reuse the logo as favicon
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: deep orange
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: deep orange
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  features:
+    - navigation.expand
+    - navigation.instant
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+    - toc.integrate
+    - navigation.top
+    - header.autohide
+    - footer
+
+# Navigation (expand as you add content)
+nav:
+  - Home: index.md
+  - Introduction:
+      - What is DLD?: 01-intro/what-is-dld.md
+      - Number Systems: 01-intro/number-systems.md
+      - Boolean Algebra: 01-intro/boolean-algebra.md
+  - Combinational Circuits:
+      - Logic Gates: 02-combinational/logic-gates.md
+      - MUX & DEMUX: 02-combinational/mux-demux.md
+  - Sequential Circuits:
+      - Flip-Flops: 03-sequential/latches-flipflops.md
+      - Counters: 03-sequential/counters.md
+  - HDL & Verilog:
+      - Basics: 04-hdl/intro-to-verilog.md
+      - Projects: 05-projects/
+  - Resources: 06-resources/
+
+# Extra stuff (footer, social links, etc.)
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/yourusername/dld-101
+    - icon: fontawesome/solid/book
+      link: https://yourusername.github.io/dld-101
+  copyright: "© 2025 z3r0d4y · Built with MkDocs Material"
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - footnotes
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.details
+  - pymdownx.critic
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tabbed:
+      alternate_style: true
