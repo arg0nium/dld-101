@@ -37,9 +37,7 @@ theme:
     - navigation.top
     - navigation.footer
     - header.autohide
-    - content.action.edit
-    - content.action.view
-    - content.action.repo
+
 
 
 nav:
@@ -76,7 +74,8 @@ extra:
     © 2025 wireoverflow • Crafted with care • 
     <a href="#__consent">Cookie Settings</a> • 
     Made with <a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a>
-
+  font:
+    code: Roboto Mono
 
 markdown_extensions:
   - admonition
