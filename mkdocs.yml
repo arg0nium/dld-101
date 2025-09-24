@@ -65,14 +65,12 @@ extra:
     - icon: fontawesome/solid/rocket
       link: https://arg0nium.github.io/dld-101
       name: "Live Site"
-    - icon: fontawesome/solid/heart
-      link: mailto:your-email@example.com
-      name: "Got Questions?"
+   
   
   generator: false 
   
   copyright: |
-    © 2025 z3r0d4y • Crafted with care • 
+    © 2025 wireoverflow • Crafted with care • 
     <a href="#__consent">Cookie Settings</a> • 
     Made with <a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a>
 
