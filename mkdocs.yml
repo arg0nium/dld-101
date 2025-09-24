@@ -37,6 +37,9 @@ theme:
     - navigation.top
     - navigation.footer
     - header.autohide
+    - content.action.edit
+    - content.action.view
+    - content.action.repo
 
 
 nav:
