@@ -114,7 +114,8 @@ markdown_extensions:
       permalink: "#"
       title: "On this page"
 
-
+repo_url: https://github.com/arg0nium/dld-101
+repo_name: arg0nium/dld-101
 plugins:
   - search:
       separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
