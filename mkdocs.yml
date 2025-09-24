@@ -1,77 +1,133 @@
-site_name: Digital Logic & Design 101
+site_name: "Digital Logic & Design 101: From Bits to Brilliance"
 site_url: https://arg0nium.github.io/dld-101
-site_author: z3r0d4y
-site_description: "Learn Digital Logic & Design – from gates to HDL"
+site_author: WireOverflow
+site_description: "Master Digital Logic & Design – Journey from basic gates to advanced HDL. Build circuits, decode binary, and think like a hardware engineer!"
 
 # Theme settings
 theme:
   name: material
-  logo: assets/logo.png     # put your logo in docs/assets/logo.png
-  favicon: assets/logo.png  # optional, reuse the logo as favicon
+  logo: assets/logo.png
+  favicon: assets/logo.png
   palette:
     - scheme: default
-      primary: indigo
-      accent: deep orange
+      primary: deep purple
+      accent: cyan
       toggle:
-        icon: material/weather-sunny
-        name: Switch to dark mode
+        icon: material/lightbulb-on
+        name: "Switch to dark mode"
     - scheme: slate
-      primary: indigo
-      accent: deep orange
+      primary: deep purple
+      accent: cyan
       toggle:
-        icon: material/weather-night
-        name: Switch to light mode
+        icon: material/lightbulb-outline
+        name: "Switch to light mode"
   features:
     - navigation.expand
     - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.tracking
     - search.suggest
     - search.highlight
+    - search.share
     - content.code.copy
     - content.code.annotate
+    - content.tooltips
+    - content.tabs.link
     - toc.integrate
     - navigation.top
+    - navigation.footer
     - header.autohide
-    - footer
 
-# Navigation (expand as you add content)
+
 nav:
-  - Home: index.md
-  - Introduction:
-      - What is DLD?: 01-intro/what-is-dld.md
-      - Number Systems: 01-intro/number-systems.md
-      - Boolean Algebra: 01-intro/boolean-algebra.md
-  - Combinational Circuits:
-      - Logic Gates: 02-combinational/logic-gates.md
-      - MUX & DEMUX: 02-combinational/mux-demux.md
-  - Sequential Circuits:
-      - Flip-Flops: 03-sequential/latches-flipflops.md
-      - Counters: 03-sequential/counters.md
-  - HDL & Verilog:
-      - Basics: 04-hdl/intro-to-verilog.md
-      - Projects: 05-projects/
-  - Resources: 06-resources/
+  - "Home": index.md
+  - "Fundamentals":
+      - "What is DLD?": 01-intro/what-is-dld.md
+      - "Number Systems Decoded": 01-intro/number-systems.md
+      - "Boolean Algebra Magic": 01-intro/boolean-algebra.md
+  - "Combinational Circuits":
+      - "Logic Gates Unleashed": 02-combinational/logic-gates.md
+      - "MUX & DEMUX Mastery": 02-combinational/mux-demux.md
+  - "Sequential Circuits":
+      - "Flip-Flops & Memory": 03-sequential/latches-flipflops.md
+      - "Counters & Timing": 03-sequential/counters.md
+  - "HDL & Verilog":
+      - "Verilog Basics": 04-hdl/intro-to-verilog.md
+      - "Hands-on Projects": 05-projects/
+  - "Resources & More": 06-resources/
 
-# Extra stuff (footer, social links, etc.)
+
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/yourusername/dld-101
-    - icon: fontawesome/solid/book
-      link: https://yourusername.github.io/dld-101
-  copyright: "© 2025 z3r0d4y · Built with MkDocs Material"
+      link: https://github.com/arg0nium/dld-101
+      name: "Fork on GitHub"
+    - icon: fontawesome/solid/rocket
+      link: https://arg0nium.github.io/dld-101
+      name: "Live Site"
+    - icon: fontawesome/solid/heart
+      link: mailto:your-email@example.com
+      name: "Got Questions?"
+  
+  generator: false 
+  
+  copyright: |
+    © 2025 z3r0d4y • Crafted with care • 
+    <a href="#__consent">Cookie Settings</a> • 
+    Made with <a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a>
+
 
 markdown_extensions:
   - admonition
-  - codehilite
-  - footnotes
-  - toc:
-      permalink: true
-  - pymdownx.superfences
-  - pymdownx.highlight
-  - pymdownx.inlinehilite
   - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
   - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tabbed:
       alternate_style: true
+      combine_header_slug: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list
+  - md_in_html
+  - footnotes
+  - toc:
+      permalink: "#"
+      title: "On this page"
+
+
+plugins:
+  - search:
+      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - minify:
+      minify_html: true
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago
+
+# Extra JavaScript and CSS
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - stylesheets/extra.css
